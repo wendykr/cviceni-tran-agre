@@ -75,7 +75,7 @@ console.log(emails);
 
 // Z pole `persons` pomocí metody `map` vytvořte pro každou osobu položku HTML seznamu ve formátu `<li>Petr (16)</li>` a výsledek uložte do proměnné `list`. Vypište toto nové pole do konzole.
 
-const list = persons.map(onePersons => `<li>${onePersons.name}</li>`)
+const list = persons.map(onePersons => `<li>${onePersons.name} (${onePersons.age})</li>`)
 
 console.log(list);
 
