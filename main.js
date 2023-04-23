@@ -83,14 +83,14 @@ console.log(list);
 
 // všechny osoby
 // const item = persons
-//     .map(onePersons => `<li>${onePersons.name}</li>`)
+//     .map(onePersons => `<li>${onePersons.name} (${onePersons.age})</li>`)
 //     .join('');
 
 // pouze zletilé osoby
 // const item = persons
 //     .map(onePersons => {
 //         if (onePersons.age > 18) {
-//             return `<li>${onePersons.name}</li>`;
+//             return `<li>${onePersons.name} (${onePersons.age})</li>`;
 //         }
 //     })
 //     .join('');
@@ -100,11 +100,11 @@ const item = persons
     .map(onePersons => {
         if (onePersons.age > 18) {
             if (onePersons.gender === 'male') {
-                return `<li data-icon="🤴" class="male">${onePersons.name}</li>`;
+                return `<li data-icon="🤴" class="male">${onePersons.name} (${onePersons.age})</li>`;
             } else if (onePersons.gender === 'female') {
-                return `<li data-icon="👸" class="female">${onePersons.name}</li>`;
+                return `<li data-icon="👸" class="female">${onePersons.name} (${onePersons.age})</li>`;
             }  else {
-                return `<li data-icon="🦄" class="nonbinary">${onePersons.name}</li>`;
+                return `<li data-icon="🦄" class="nonbinary">${onePersons.name} (${onePersons.age})</li>`;
             }
         }
     })
