@@ -96,7 +96,7 @@ console.log(list);
 //     .join('');
 
 // pouze zletilé osoby včetně css třídy dle pohlaví
-const item = persons
+const items = persons
     .map(onePersons => {
         if (onePersons.age > 18) {
             if (onePersons.gender === 'male') {
@@ -108,13 +108,14 @@ const item = persons
             }
         }
     })
-    .join('');
 
-console.log(item);
+console.log(items);
 
 const divElm = document.createElement('div');
-document.querySelector('h1').appendChild(divElm);
+document.querySelector('body').appendChild(divElm);
 
-divElm.innerHTML = `<ul>${item}</ul>`;
+const ulElm = document.createElement('ul');
+ulElm.innerHTML = items.join('');
+divElm.appendChild(ulElm);
 
-console.log(divElm);
+console.log(ulElm);
